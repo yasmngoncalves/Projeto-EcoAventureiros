@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo do site */
+body {
+    background-color: #F0F8E2; /* Um tom claro de verde */
+    color: #333; /* Cor do texto padrão */
+    font-family: 'Arial', sans-serif; /* Fonte amigável para crianças */
+}
+
+/* Adicionando uma leve textura ao fundo */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/white-light-wood.png'); /* Uma textura de madeira clara */
+    opacity: 0.1; /* Leveza da textura */
+    pointer-events: none; /* Não interfere com os cliques */
+}
+
+/* Navbar*/
+.navbar {
+    background-color: #29B6F6;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    background-color: #FFC107;
+    border-radius: 5px;
+}
+
+/* Estilo para os itens do menu */
+.navbar-nav .nav-link {
+    color: white; 
+    transition: background-color 0.3s; 
+}
+
+/* Item ativo com fundo azul */
+.navbar-nav .nav-link.active {
+    background-color: #FFC107;  
+    color: white; 
+}
+
+.navbar-nav .nav-link:not(.active):hover {
+    background-color: #FFC107; 
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Estilo do botão toggler para fundo amarelo */
+.custom-toggler {
+    background-color: #FFD700; 
+    border: none; 
+}
+
+/* Estilo para o ícone do toggler com listras brancas */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='white' stroke-width='1.5' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E");
+}
+
+/* Estilo para os títulos*/
+h2 {
+    color: #2E7D32;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem; 
+    font-weight: bold; 
+    margin-top: 2rem; 
+    margin-bottom: 1.5rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    /*border-bottom: 2px solid #43A047;*/
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo para os cards */
+.card {
+    border-radius: 15px; /* Arredonda as bordas do card */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para efeito hover */
+}
+
+/* Arredondar as bordas das imagens dos cards */
+.card-img-top {
+    border-radius: 15px; /* Arredonda a parte superior da imagem */
+}
+
+/* Efeito hover para os cards */
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card quando hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Estilo para o título dos cards */
+.card-title {
+    font-family: 'Arial', sans-serif; /* Escolha de fonte */
+    color: #2E7D32; /* Verde escuro para o tema eco */
+    font-size: 1.25rem; /* Tamanho um pouco maior que o texto padrão */
+    font-weight: bold; /* Negrito para destaque */
+    text-align: center; /* Centraliza o título do card */
+}
+
+/* Estilo para o texto dos cards */
+.card-text {
+    font-family: 'Arial', sans-serif;
+    color: #555; /* Cinza para contraste com o título */
+    font-size: 1rem;
+    text-align: center; /* Justifica o texto para melhor leitura */
+}
+
+/* Estilo para o botão do card */
+.card .btn {
+    display: block; /* Garante que o botão ocupe toda a largura do container de referência */
+    width: 50%; /* Define largura específica para o botão */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    color: white; /* Cor do texto do botão */
+    background-color: #FFC107; /* Cor de fundo para o botão */
+    border: none; /* Remove bordas do botão */
+    transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Efeito hover para o botão */
+.card .btn:hover {
+    background-color: #dba503; /* Azul mais escuro no hover */
+}
+
+/*Área de texto do Sobre*/
+.text-container {
+    max-width: 800px; /* Define uma largura máxima para o texto */
+    margin: 0 auto;   /* Centraliza a área de texto */
+}
+
+.text-container p {
+    margin-bottom: 1.5rem; /* Aumenta o espaço entre os parágrafos */
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.avatar {
+    text-align: center;
+    margin: 10px; 
+}
+
+.avatar-img {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.avatar-img:hover {
+    transform: scale(1.1);
+}
+
+.avatar p {
+    margin-top: 0.5rem; 
+    font-size: 1.2rem; 
+    color: #4CAF50;
+    font-weight: bold; 
+}
+
+/* Estilo do footer */
+footer a {
+    color: white; /* Cor do texto do footer */
+    text-align: center; /* Centraliza o texto no footer */
+}
+
+/* Estilo para o hr no footer */
+footer div {
+    color: #fff;
+    text-transform: none;
+}
+
+footer hr {
+    border: none;
+    height: 1px; 
+    background-color: white; 
+    margin: 10px 0; 
+}
+
+/*CSS DO JOGO DA MEMORIA*/
+/*estilo dos cards*/
+#game-board {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Espaço entre as cartas */
+    margin: 30px; /* Margem ao redor do tabuleiro */
+}
+.memory-card {
+    width: 90px;  
+    height: 90px; 
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #009688; 
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 2em;
+    color: transparent; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.memory-card.flipped {
+    background-color: #4db6ac; 
+    color: #ffffff; 
+}
