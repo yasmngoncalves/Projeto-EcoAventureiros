@@ -2,5 +2,5 @@
 
 Este projeto está atualmente em desenvolvimento. Para acessar a versão mais recente em execução, clique no link abaixo:
 
-[Link para o Projeto em Execução](#) 
+[Link para o Projeto em Execução](https://yasmngoncalves.github.io/Projeto-EcoAventureiros/index.html) 
 
