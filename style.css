@@ -200,31 +200,3 @@ footer hr {
     background-color: white; 
     margin: 10px 0; 
 }
-
-/*CSS DO JOGO DA MEMORIA*/
-/*estilo dos cards*/
-#game-board {
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px; /* Espaço entre as cartas */
-    margin: 30px; /* Margem ao redor do tabuleiro */
-}
-.memory-card {
-    width: 90px;  
-    height: 90px; 
-    cursor: pointer;
-    position: relative;
-    border: 2px solid #009688; 
-    border-radius: 10px;
-    background-color: #ffffff;
-    font-size: 2em;
-    color: transparent; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-}
-
-.memory-card.flipped {
-    background-color: #4db6ac; 
-    color: #ffffff; 
-}

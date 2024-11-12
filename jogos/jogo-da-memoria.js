@@ -1,104 +1,96 @@
-const cards = [
-    'A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E', 'F', 'F', 'G', 'G', 'H', 'H'
-];
+// Variáveis do jogo
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+const cards = [...numbers, ...numbers];
+let flippedCards = [];
+let matchedCards = [];
 
-let firstCard = null;
-let secondCard = null;
-let lockBoard = false;
-
-// selecionar os botões e o tabuleiro
-const startButton = document.getElementById('start-game');
-const resetButton = document.getElementById('reset-game');
-const gameBoard = document.getElementById('game-board');
-
-// embaralhar os cards
+// Função para embaralhar cartas
 function shuffle(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-// criando os cards no html
+// Função para criar o tabuleiro do jogo
 function createBoard() {
-    gameBoard.innerHTML = '';
-    const shuffledCards = shuffle([...cards]);
-    shuffledCards.forEach(card => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('memory-card');
-        cardElement.dataset.value = card;
-
-        cardElement.textContent = card; // Exibe a letra no card
-
-        cardElement.addEventListener('click', flipCard);
-        gameBoard.appendChild(cardElement);
+    const gameBoard = document.getElementById('game-board');
+    gameBoard.innerHTML = ''; // Limpa o tabuleiro
+    shuffle(cards).forEach((number) => {
+        const card = document.createElement('div');
+        card.classList.add('game-card');
+        card.dataset.number = number;
+        card.textContent = '';
+        gameBoard.appendChild(card);
+        card.addEventListener('click', flipCard);
     });
 }
 
-// iniciar o jogo
+// Função para iniciar o jogo
 function startGame() {
-    createBoard();
-    gameBoard.classList.remove('hidden');
-    startButton.style.display = 'none';
-    resetButton.style.display = 'inline-block';
-}
-
-// reiniciar o jogo
-function resetGame() {
-    resetBoard(); 
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('game-board').style.display = 'grid';
+    document.getElementById('game-controls').style.display = 'block';
     createBoard();
 }
 
-// virar os cards
+// Função para reiniciar o jogo embaralhando as cartas
+function restartGame() {
+    flippedCards = [];
+    matchedCards = [];
+    createBoard();
+}
+
+// Função para voltar ao início
+function goHome() {
+    document.getElementById('start-screen').style.display = 'block';
+    document.getElementById('game-board').style.display = 'none';
+    document.getElementById('game-controls').style.display = 'none';
+    document.getElementById('end-screen').style.display = 'none';
+}
+
+// Função para virar a carta
 function flipCard() {
-    if (lockBoard) return;
-    if (this === firstCard) return;
-
+    if (flippedCards.length === 2) return;
     this.classList.add('flipped');
+    this.textContent = this.dataset.number;
+    flippedCards.push(this);
 
-    if (!firstCard) {
-        firstCard = this;
-    } else {
-        secondCard = this;
+    if (flippedCards.length === 2) {
         checkMatch();
     }
 }
 
-// verificar cards correspondentes
+// Verifica se as cartas viradas são iguais
 function checkMatch() {
-    let isMatch = firstCard.dataset.value === secondCard.dataset.value;
-    isMatch ? disableCards() : unflipCards();
-}
+    const [card1, card2] = flippedCards;
+    const isMatch = card1.dataset.number === card2.dataset.number;
 
-// desabilitar os cards quando formar um par
-function disableCards() {
-    firstCard.classList.add('matched');
-    secondCard.classList.add('matched');
-
-    // verifica se todas as cartas foram combinadas
-    if (document.querySelectorAll('.matched').length === cards.length) {
+    if (isMatch) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        matchedCards.push(card1, card2);
+        checkGameOver();
+    } else {
         setTimeout(() => {
-            alert('Você encontrou todos os pares. Parabéns!');
-            resetGame(); 
-        }, 500); 
+            card1.classList.remove('flipped');
+            card2.classList.remove('flipped');
+            card1.textContent = ''; // Retorna se não forem iguais
+            card2.textContent = '';
+        }, 1000);
     }
 
-    resetBoard();
+    flippedCards = [];
 }
 
-// desvirar os cards quando não for par
-function unflipCards() {
-    lockBoard = true;
-    setTimeout(() => {
-        firstCard.classList.remove('flipped');
-        secondCard.classList.remove('flipped');
-
-        resetBoard();
-    }, 1000);
+// Função para verificar se o jogo terminou
+function checkGameOver() {
+    if (matchedCards.length === cards.length) {
+        document.getElementById('game-board').style.display = 'none';
+        document.getElementById('game-controls').style.display = 'none';
+        document.getElementById('end-screen').style.display = 'block';
+    }
 }
 
-// resetar os cards
-function resetBoard() {
-    [firstCard, secondCard, lockBoard] = [null, null, false];
-}
-
-// adicionar eventos aos botões
-startButton.addEventListener('click', startGame);
-resetButton.addEventListener('click', resetGame);
+// Inicializa o jogo quando a página carrega
+document.getElementById('start-game-button').addEventListener('click', startGame);
+document.getElementById('restart-button').addEventListener('click', restartGame);
+document.getElementById('home-button').addEventListener('click', goHome);
+document.getElementById('play-again-button').addEventListener('click', startGame);
