@@ -1,0 +1,51 @@
+/* jogo.css */
+
+/* Estilos do game-intro */
+#game-intro {
+    margin-bottom: 20px;
+}
+/* Estilo do tabuleiro e dos cards */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.game-card {
+    width: 100px;
+    height: 100px;
+    background-color: #2196F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.game-card.flipped {
+    background-color: #FFF;
+    color: #2196F3;
+}
+
+.game-card.matched {
+    background-color: #D3D3D3;  
+    color: #2196F3;            
+    pointer-events: none;      
+}
+
+/*Mensagem Final*/
+#game-over-message h3 {
+    color: #2E7D32;
+}
+
+#game-controls button {
+    margin: 0 5px;
+}
+
+

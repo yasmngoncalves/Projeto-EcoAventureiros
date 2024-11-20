@@ -5,34 +5,29 @@
     box-sizing: border-box;
 }
 
-/* Fundo do site */
-body {
-    background-color: #F0F8E2; /* Um tom claro de verde */
-    color: #333; /* Cor do texto padrão */
-    font-family: 'Arial', sans-serif; /* Fonte amigável para crianças */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-/* Adicionando uma leve textura ao fundo */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/white-light-wood.png'); /* Uma textura de madeira clara */
-    opacity: 0.1; /* Leveza da textura */
-    pointer-events: none; /* Não interfere com os cliques */
+/* Fundo do site - Background - Corpo */
+body {
+    background-color: #F0F8E2; 
+    color: #333; 
+    font-family: 'Open Sans', sans-serif; 
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar*/
 .navbar {
-    background-color: #29B6F6;
+    background: #29B6F6;
 }
 
 .navbar-brand, .nav-link {
     color: #fff !important;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .nav-link.active {
@@ -42,18 +37,20 @@ body::before {
 
 /* Estilo para os itens do menu */
 .navbar-nav .nav-link {
-    color: white; 
+    color: white;
+    margin: 0 10px;
     transition: background-color 0.3s; 
 }
 
 /* Item ativo com fundo azul */
 .navbar-nav .nav-link.active {
     background-color: #FFC107;  
-    color: white; 
+    color: white;
 }
 
 .navbar-nav .nav-link:not(.active):hover {
-    background-color: #FFC107; 
+    background-color: #FFC107;
+    border-radius: 5px;  
 }
 
 .navbar-toggler {
@@ -75,10 +72,31 @@ body::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath stroke='white' stroke-width='1.5' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E");
 }
 
+/* Define o tamanho fixo do carrossel apenas para telas maiores */
+@media (min-width: 992px) {
+    .carousel-container {
+        max-width: 1250px;
+        height: 400px;
+        margin: 30px auto;
+        border-radius: 35px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
+    }
+
+    .carousel-container .carousel-item img {
+        height: 400px;
+        object-fit: cover;
+        border-radius: 35px;
+    }
+}
+
+main {
+    flex: 1;
+}
+
 /* Estilo para os títulos*/
 h2 {
     color: #2E7D32;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem; 
     font-weight: bold; 
     margin-top: 2rem; 
@@ -152,51 +170,41 @@ h2 {
     margin-bottom: 1.5rem; /* Aumenta o espaço entre os parágrafos */
 }
 
-.avatar-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 3rem;
-}
-
-.avatar {
-    text-align: center;
-    margin: 10px; 
-}
-
-.avatar-img {
-    width: 150px; 
-    height: 150px; 
-    border-radius: 50%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-}
-
-.avatar-img:hover {
-    transform: scale(1.1);
-}
-
-.avatar p {
-    margin-top: 0.5rem; 
-    font-size: 1.2rem; 
-    color: #4CAF50;
-    font-weight: bold; 
-}
 
 /* Estilo do footer */
-footer a {
-    color: white; /* Cor do texto do footer */
-    text-align: center; /* Centraliza o texto no footer */
+footer {
+    width: 100%;
+    background: #43A047;          
+    color: white;
+    padding-top: 50px;
+    text-align: center;
 }
 
-/* Estilo para o hr no footer */
-footer div {
+footer h5 {
+    font-weight: bold;
+}
+
+/* Estilos para os links do footer */
+.footer-nav-link {
     color: #fff;
-    text-transform: none;
+    text-decoration: none;
+    font-weight: normal;
 }
 
-footer hr {
-    border: none;
-    height: 1px; 
-    background-color: white; 
-    margin: 10px 0; 
+.footer-nav {
+    list-style-type: none;
+    padding-left: 0; /* Remove o espaçamento à esquerda */
 }
+
+/* Responsividade do Footer */
+@media (max-width: 767px) {
+    .footer-nav {
+        text-align: center;
+    }
+    
+    .footer-nav-link {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
