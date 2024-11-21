@@ -1,0 +1,72 @@
+/*Área do Quiz*/
+.board-quiz {
+    display: block;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/*Imagens do quiz*/
+main img {
+    width: 60%;
+    border-radius: 35px;
+}
+
+.question-image {
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse o contêiner */
+    height: auto; /* Mantém as proporções */
+    display: block;
+    margin: 0 auto;
+}
+
+/*Estilo para botões gerais*/
+main .btn {
+    padding: 10px 30px;
+    font-size: 18px; 
+    color: white;
+    background-color: #FFC107; 
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover: efeito ao passar o mouse */
+main .btn:hover {
+    background-color: #dba503;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*Botões do quiz*/
+button.option {
+    padding: 10px 30px;
+    font-size: 18px; 
+    background-color: #a9a9a9; 
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+button.option:hover {
+    background-color: #FFC107; 
+}
+
+button:disabled {
+    pointer-events: none; 
+}
+
+button.correct {
+    background-color: green;
+    color: white;
+}
+
+button.incorrect {
+    background-color: red;
+    color: white;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

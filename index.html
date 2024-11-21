@@ -41,8 +41,8 @@
                 
                 <!-- Barra de Pesquisa (exibida em telas maiores) -->
                 <form class="d-none d-lg-flex ms-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                    <button class="btn btn-warning" type="submit">
+                    <input class="form-control me-2 area-pesquisa" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-warning btn-lupa" type="submit">
                         <i class="bi bi-search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                         </svg></i>
@@ -61,7 +61,7 @@
             <h2 id="carousel-section" class="visually-hidden">Carrossel de Imagens</h2> <!-- Título oculto para acessibilidade -->
             
             <!-- Carrossel -->
-            <div id="carouselExampleIndicators" class="carousel slide">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -86,22 +86,24 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+            </div>
         </section>
+           
 
         <!--Cards-->
         <section class="container my-5">
-            <h2 class="text-center mb-4">Jogos</h2>
-            
+            <h2 class="text-center mb-4">Vamos começar a jornada!</h2>
+                        
             <div class="row">
                 <!-- Primeiro Card -->
                 <div class="col-md-4">
                     <div class="card h-100">
                         <img src="images/banner-card1.png" class="card-img-top" alt="Imagem do Card 1">
                         <div class="card-body">
-                            <h5 class="card-title">Aventura Sustentável</h5>
-                            <p class="card-text">Pronto para embarcar numa aventura pelo planeta? Responda as perguntas do quiz e descubra se você é um verdadeiro herói da natureza!</p>
-                            <a href="#" class="btn btn-primary">JOGUE AGORA!</a>
+                            <h5 class="card-title">Vamos jogar</h5>
+                            <p class="card-text">Prepare-se para se divertir enquanto aprende! Jogue o quiz e desafie sua memória com o jogo da memória. Está pronto para a aventura?
+                            </p>
+                            <a href="jogos.html" class="btn btn-primary">JOGUE AGORA!</a>
                         </div>
                     </div>
                 </div>
@@ -111,8 +113,9 @@
                     <div class="card h-100">
                         <img src="images/banner-card2.png" class="card-img-top" alt="Imagem do Card 2">
                         <div class="card-body">
-                            <h5 class="card-title">Desafio da Reciclagem</h5>
-                            <p class="card-text">Arraste cada tipo de lixo até a lata certa e mostre suas habilidades de mestre da natureza. Vamos cuidar do planeta juntos de um jeito divertido!</p>
+                            <h5 class="card-title">Aprenda mais</h5>
+                            <p class="card-text">Explore curiosidades, dicas e histórias sobre como cuidar do planeta. Aqui você encontra conteúdos educativos cheios de diversão e informação!
+                            </p>
                             <a href="#" class="btn btn-primary">JOGUE AGORA!</a>
                         </div>
                     </div>
@@ -123,8 +126,9 @@
                     <div class="card h-100">
                         <img src="images/banner-card3.png" class="card-img-top" alt="Imagem do Card 3">
                         <div class="card-body">
-                            <h5 class="card-title">Jogo da Memória</h5>
-                            <p class="card-text">Vamos testar sua memória! Encontre os pares amigos da natureza e ajude a preservar o planeta de forma divertida!</p>
+                            <h5 class="card-title">Explore a Galeria</h5>
+                            <p class="card-text">Veja as incríveis criações e desenhos dos nossos amigos estão compartilhando suas artes, e você também pode enviar a sua!
+                            </p>
                             <a href="jogos/jogo-memoria.html" class="btn btn-primary">JOGUE AGORA!</a>
                         </div>
                     </div>
@@ -143,9 +147,12 @@
                 
                 <!-- Texto da Seção Sobre -->
                 <div class="col-md-6">
-                    <h2>Sobre Nós</h2>
+                    <h2>Quem Somos</h2>
                     <p>
-                        No EcoAventureiros, aprender sobre sustentabilidade é uma aventura divertida! Aqui, cada jogo foi criado para inspirar crianças a conhecerem a importância de cuidar do planeta de forma leve e educativa. Através de desafios envolventes, como quizzes e jogos da memória, os pequenos exploram temas como reciclagem, preservação ambiental e consumo consciente. Nosso objetivo é mostrar que todos podem fazer a diferença — e tudo começa com pequenas escolhas no dia a dia. Junte-se a essa missão e venha ser um guardião do futuro!
+                        O EcoAventureiros é um espaço cheio de aventuras e descobertas, feito para quem quer cuidar do planeta brincando e aprendendo. Aqui, você é o herói da história, ajudando a criar um mundo mais sustentável com escolhas simples e divertidas!
+                    </p>
+                    <p>
+                        Nosso objetivo é ensinar, inspirar e convidar você a explorar, aprender e compartilhar. Vamos juntos nessa missão ecológica? O planeta conta com a gente!
                     </p>
                 </div>
             </div>
@@ -171,7 +178,7 @@
                         <ul class="footer-nav">
                             <li><a class="footer-nav-link" href="#">Página Inicial</a></li>
                             <li><a class="footer-nav-link" href="jogos.html">Jogos Educativos</a></li>
-                            <li><a class="footer-nav-link" href="sobre.html">Sobre Nós</a></li>
+                            <li><a class="footer-nav-link" href="sobre.html">Quem Somos</a></li>
                             <li><a class="footer-nav-link" href="contato.html">Contato</a></li>
                         </ul>
                     </div>
@@ -180,8 +187,8 @@
                     <div class="single-box">
                         <h5>Jogos</h5>
                         <ul class="footer-nav">
-                            <li><a class="footer-nav-link" href="quiz-aventura/quiz.html">QUIZ Aventura Sustentável</a></li>
-                            <li><a class="footer-nav-link" href="jogo-memoria/jogo-memoria.html">Jogo da EcoMemória</a></li>
+                            <li><a class="footer-nav-link" href="jogos/jogo-memoria.html">Jogo da Ecomemória</a></li>
+                            <li><a class="footer-nav-link" href="jogos/quiz.html">Aventura Sustentável</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,77 @@
+/* jogo.css */
+#banner-game {
+    width: 60%;
+    border-radius: 35px;
+}
+
+/* Estilos do game-intro */
+#game-intro {
+    margin-bottom: 30px;
+}
+/* Estilo do tabuleiro e dos cards */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas fixas */
+    gap: 10px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.game-card {
+    width: 100px;
+    height: 100px;
+    background-color: #2196F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+    border-radius: 8px;
+}
+
+.game-card img.hidden {
+    display: none;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+}
+
+.game-card.flipped {
+    background-color: #ffffff;
+}
+
+.game-card.matched {
+    background-color: #48a72b;  
+    pointer-events: none;      
+}
+
+/*Mensagem Final*/
+#end-screen {
+    margin-bottom: 50px;
+}
+
+/*Estilo para botões*/
+.btn {
+    padding: 10px 30px;
+    font-size: 18px; 
+    color: white;
+    background-color: #FFC107; 
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover: efeito ao passar o mouse */
+.btn:hover {
+    background-color: #dba503;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}

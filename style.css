@@ -30,10 +30,6 @@ body {
     text-transform: uppercase;
 }
 
-.nav-link.active {
-    background-color: #FFC107;
-    border-radius: 5px;
-}
 
 /* Estilo para os itens do menu */
 .navbar-nav .nav-link {
@@ -46,11 +42,14 @@ body {
 .navbar-nav .nav-link.active {
     background-color: #FFC107;  
     color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
 }
 
 .navbar-nav .nav-link:not(.active):hover {
     background-color: #FFC107;
-    border-radius: 5px;  
+    border-radius: 25px;
+    padding: 10px 20px;  
 }
 
 .navbar-toggler {
@@ -59,6 +58,15 @@ body {
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.area-pesquisa {
+    border: none;
+    border-radius: 25px;
+}
+
+.btn-lupa {
+    border-radius: 25px;
 }
 
 /* Estilo do botão toggler para fundo amarelo */
@@ -103,71 +111,72 @@ h2 {
     margin-bottom: 1.5rem; 
     text-transform: uppercase; 
     letter-spacing: 1px;
-    /*border-bottom: 2px solid #43A047;*/
     padding-bottom: 0.5rem;
 }
 
 /* Estilo para os cards */
 .card {
-    border-radius: 15px; /* Arredonda as bordas do card */
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para efeito hover */
+    border-radius: 15px; 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* Arredondar as bordas das imagens dos cards */
 .card-img-top {
-    border-radius: 15px; /* Arredonda a parte superior da imagem */
+    border-radius: 15px;
 }
 
 /* Efeito hover para os cards */
 .card:hover {
-    transform: translateY(-5px); /* Levanta o card quando hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
 }
 
 /* Estilo para o título dos cards */
 .card-title {
-    font-family: 'Arial', sans-serif; /* Escolha de fonte */
-    color: #2E7D32; /* Verde escuro para o tema eco */
-    font-size: 1.25rem; /* Tamanho um pouco maior que o texto padrão */
-    font-weight: bold; /* Negrito para destaque */
-    text-align: center; /* Centraliza o título do card */
+    font-family: 'Arial', sans-serif; 
+    color: #2E7D32; 
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    text-align: center; 
 }
 
 /* Estilo para o texto dos cards */
 .card-text {
     font-family: 'Arial', sans-serif;
-    color: #555; /* Cinza para contraste com o título */
+    color: #555; 
     font-size: 1rem;
-    text-align: center; /* Justifica o texto para melhor leitura */
+    text-align: center; 
 }
 
 /* Estilo para o botão do card */
 .card .btn {
-    display: block; /* Garante que o botão ocupe toda a largura do container de referência */
-    width: 50%; /* Define largura específica para o botão */
-    margin: 0 auto; /* Centraliza o botão horizontalmente */
-    color: white; /* Cor do texto do botão */
-    background-color: #FFC107; /* Cor de fundo para o botão */
-    border: none; /* Remove bordas do botão */
-    transition: background-color 0.3s ease; /* Transição suave para o efeito hover */
+    display: block; 
+    width: 50%; 
+    margin: 0 auto; 
+    color: white; 
+    background-color: #FFC107; 
+    border: none; 
+    transition: background-color 0.3s ease; 
     text-transform: uppercase;
     font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
 }
 
 /* Efeito hover para o botão */
 .card .btn:hover {
-    background-color: #dba503; /* Azul mais escuro no hover */
+    background-color: #dba503; 
 }
 
 /*Área de texto do Sobre*/
 .text-container {
-    max-width: 800px; /* Define uma largura máxima para o texto */
-    margin: 0 auto;   /* Centraliza a área de texto */
+    max-width: 800px; 
+    margin: 0 auto;   
 }
 
 .text-container p {
-    margin-bottom: 1.5rem; /* Aumenta o espaço entre os parágrafos */
+    margin-bottom: 1.5rem; 
 }
 
 
@@ -193,7 +202,7 @@ footer h5 {
 
 .footer-nav {
     list-style-type: none;
-    padding-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 0; 
 }
 
 /* Responsividade do Footer */
