@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoAventureiros - Quem Somos</title>
-    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <title>EcoAventureiros - Galeria</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -38,10 +37,10 @@
                         <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="galeria.html">Galeria</a>
+                        <a class="nav-link active" href="galeria.html">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                        <a class="nav-link" href="sobre.html">Sobre</a>
                     </li>
                 </ul>
                 
@@ -58,35 +57,45 @@
         </div>
     </nav>
     
-    <!-- Conteúdo Principal -->
-    <main role="main">
-        <section class="container my-5">
-                       
-            <!-- Texto "Sobre o EcoAventureiros" -->
-            <h2 class="text-center mb-4">Sobre o EcoAventureiros</h2>
-            <div class="text-container">
-                <p>
-                    O EcoAventureiros é uma plataforma de jogos educativos que busca ensinar, de forma divertida, a importância da sustentabilidade para crianças. Acreditamos que pequenos gestos podem transformar o futuro e que a educação é a chave para criar um mundo mais consciente e equilibrado.
-                </p>
-                <p>
-                    Nosso propósito é unir diversão, aprendizado e responsabilidade ambiental por meio de jogos interativos, como quiz, memória e coleta seletiva. Cada atividade foi pensada para mostrar como conceitos como reciclagem, preservação ambiental e consumo consciente podem ser aplicados no dia a dia.
-                </p>
-                <p>
-                    Queremos que as crianças aprendam brincando e sintam-se motivadas a fazer parte dessa jornada. Aqui, cada resposta certa, cada par encontrado e cada palavra adivinhada é um passo rumo a um futuro melhor. A missão do EcoAventureiros é clara: jogar, aprender e cuidar do planeta, juntos!
-                </p>
-                <p>
-                    Junte-se a essa aventura e ajude a espalhar boas ideias para um mundo mais sustentável!
-                </p>
+    <!-- Galeria -->
+    <main class="container gallery">
+        <h2 class="gallery-title text-center">Veja a Arte dos EcoAventureiros</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 gallery">
+            <div class="col">
+                <a href="gallery/foto-galeria1.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria1.jpg" class="img-fluid rounded shadow" alt="Foto 1">
+                </a>
             </div>
-
-            <!-- Banner Responsivo -->
-            <div class="banner text-center mb-4">
-                <img src="images/banner-pag-sobre.png" alt="Banner EcoAventureiros - Junte-se à Aventura Sustentável!" class="img-fluid w-100">
+            <div class="col">
+                <a href="gallery/foto-galeria2.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria2.jpg" class="img-fluid rounded shadow" alt="Foto 2">
+                </a>
             </div>
-        </section>
+            <div class="col">
+                <a href="gallery/foto-galeria3.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria3.jpg" class="img-fluid rounded shadow" alt="Foto 3">
+                </a>
+            </div>
+            <div class="col">
+                <a href="gallery/foto-galeria4.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria4.jpg" class="img-fluid rounded shadow" alt="Foto 4">
+                </a>
+            </div>
+            <div class="col">
+                <a href="gallery/foto-galeria5.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria5.jpg" class="img-fluid rounded shadow" alt="Foto 5">
+                </a>
+            </div>
+            <div class="col">
+                <a href="gallery/foto-galeria6.jpg" class="d-block" target="_blank">
+                    <img src="gallery/foto-galeria6.jpg" class="img-fluid rounded shadow" alt="Foto 6">
+                </a>
+            </div>
+        </div>
     </main>
 
     <!--Footer-->
+        
     <footer>
         <div class="container">
             <div class="row">
@@ -103,7 +112,7 @@
                     <div class="single-box">
                         <h5>Mapa do Site</h5>
                         <ul class="footer-nav">
-                            <li><a class="footer-nav-link" href="index.html">Página Inicial</a></li>
+                            <li><a class="footer-nav-link" href="#">Página Inicial</a></li>
                             <li><a class="footer-nav-link" href="jogos.html">Jogos Educativos</a></li>
                             <li><a class="footer-nav-link" href="blog.html">Blog Educacional</a></li>
                             <li><a class="footer-nav-link" href="galeria.html">Galeria EcoAventureiros</a></li>
@@ -135,8 +144,10 @@
         </div>
     </footer>
     
-
+        
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
 </body>
 </html>

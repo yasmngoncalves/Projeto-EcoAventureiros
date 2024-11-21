@@ -217,3 +217,16 @@ footer h5 {
     }
 }
 
+/*Estilo Galeria*/
+.gallery {
+    margin: 30px auto;
+}
+
+.gallery img {
+    transition: transform 0.3s ease-in-out; 
+}
+
+.gallery img:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+}
