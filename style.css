@@ -32,24 +32,21 @@ body {
 
 
 /* Estilo para os itens do menu */
-.navbar-nav .nav-link {
+#navbarNav .navbar-nav .nav-link {
     color: white;
-    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 25px;
     transition: background-color 0.3s; 
 }
 
-/* Item ativo com fundo azul */
-.navbar-nav .nav-link.active {
-    background-color: #FFC107;  
-    color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
+#navbarNav .navbar-nav .nav-item + .nav-item {
+    margin-left: 2px;
 }
 
+/* Item ativo com fundo azul */
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:not(.active):hover {
-    background-color: #FFC107;
-    border-radius: 25px;
-    padding: 10px 20px;  
+    background-color: #FFC107;  
 }
 
 .navbar-toggler {
@@ -67,6 +64,22 @@ body {
 
 .btn-lupa {
     border-radius: 25px;
+}
+
+/* Responsividade do NavBar */
+@media (max-width: 490px) {
+    .navbar-brand {
+        max-width: 80%;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+        height: auto;
+    }
+
+    .navbar-toggler {
+        max-width: 20%;
+    }
 }
 
 /* Estilo do botão toggler para fundo amarelo */
