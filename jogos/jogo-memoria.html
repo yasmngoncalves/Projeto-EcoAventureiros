@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoAventureiros - Jogo da Ecomemória</title>
     <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="jogo.css">
 
 </head>
+
 <body>
-    
+
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -22,12 +25,14 @@
             <a class="navbar-brand" href="../index.html">
                 <img src="../images/ecoaventureiros-logo.png" alt="EcoAventureiros" title="EcoAventureiros" height="50">
             </a>
-    
+
             <!-- Botão de Toggle para Mobile -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Links da Navbar e barra de pesquisa -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
@@ -47,10 +52,11 @@
                         <a class="nav-link" href="../sobre.html">Sobre</a>
                     </li>
                 </ul>
-                
+
                 <!-- Barra de Pesquisa (exibida em telas maiores) -->
                 <form class="d-none d-lg-flex ms-3" role="search">
-                    <input class="form-control me-2 area-pesquisa" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <input class="form-control me-2 area-pesquisa" type="search" placeholder="Pesquisar"
+                        aria-label="Pesquisar">
                     <button class="btn btn-warning btn-lupa" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
@@ -58,24 +64,25 @@
             </div>
         </div>
     </nav>
-    
+
     <!--Conteúdo Principal-->
     <main role="main" class="container mt-5">
-        
+
         <div id="start-screen" class="text-center">
-            <img src="gameimages/banner-jogo-ecomemoria.png" alt="Imagem ilustrativa do jogo" id="banner-game" class="img-fluid mb-3">
+            <img src="gameimages/banner-jogo-ecomemoria.png" alt="Imagem ilustrativa do jogo" id="banner-game"
+                class="img-fluid mb-3">
             <p>Teste sua memória com o nosso jogo de cartas. Clique no botão abaixo para iniciar!</p>
             <button id="start-game-button" class="btn">Iniciar o Jogo</button>
         </div>
-        
+
         <div id="game-board" class="my-4"></div>
-    
+
         <!-- Botões de controle durante o jogo -->
         <div id="game-controls" class="text-center my-3" style="display: none;">
             <button id="restart-button" class="btn">Embaralhar Novamente</button>
             <button id="home-button" class="btn">Voltar ao Início</button>
         </div>
-        
+
         <div id="end-screen" class="text-center" style="display: none;">
             <h3>Parabéns! Você completou o jogo!</h3>
             <img src="gameimages/banner-comemoracao.png" alt="Parabéns!" id="banner-game" class="img-fluid mb-3">
@@ -83,10 +90,10 @@
             <button id="play-again-button" class="btn btn-primary">Jogar Novamente</button>
             <button id="home-button-end" class="btn">Voltar ao Início</button>
         </div>
-        
+
     </main>
-     
-    
+
+
     <!--Footer-->
     <footer>
         <div class="container">
@@ -100,13 +107,16 @@
                         </p>
                         <!-- Ícones de Redes Sociais -->
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/profile.php?id=61569595804767" target="_blank" class="text-white mx-2">
+                            <a href="https://www.facebook.com/profile.php?id=61569595804767" target="_blank"
+                                class="text-white mx-2">
                                 <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
                             </a>
-                            <a href="https://www.instagram.com/eco_aventureiros/#" target="_blank" class="text-white mx-2">
+                            <a href="https://www.instagram.com/eco_aventureiros/#" target="_blank"
+                                class="text-white mx-2">
                                 <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
                             </a>
-                            <a href="https://github.com/yasmngoncalves/Projeto-EcoAventureiros" target="_blank" class="text-white mx-2">
+                            <a href="https://github.com/yasmngoncalves/Projeto-EcoAventureiros" target="_blank"
+                                class="text-white mx-2">
                                 <i class="bi bi-github" style="font-size: 1.5rem;"></i>
                             </a>
                         </div>
@@ -139,19 +149,24 @@
                         <img src="../images/icone-footer.png" alt="" height="200px">
                     </div>
                 </div>
-                
+
             </div>
-            
+
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2024 EcoAventureiros. Todos os direitos reservados.</p>
+                <p id="copyright" class="w-100 text-center" />
             </div>
         </div>
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
     <script src="jogo-da-memoria.js"></script>
-
+    <script src="../index.js"></script>
 </body>
+
 </html>
