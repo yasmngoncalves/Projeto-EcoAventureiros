@@ -36,7 +36,7 @@ body {
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
-    transition: background-color 0.3s; 
+    transition: background-color 0.4s ease; 
 }
 
 #navbarNav .navbar-nav .nav-item + .nav-item {
@@ -211,6 +211,11 @@ footer h5 {
     color: #fff;
     text-decoration: none;
     font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-link:hover {
+    color: #FFC107;
 }
 
 .footer-nav {
